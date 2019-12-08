@@ -101,8 +101,9 @@ def add_squir(request):
 def map_squir(request):
     
     sightings = Squirrel.objects.all()
-    sightings = random.choices(sightings, k=100)   #randomly choose 100 squirrels so as to avoid overload
-
+    if sightings:
+        sightings = random.choices(sightings, k=100)   #randomly choose 100 squirrels so as to avoid overload
+    
     context = {
         'sightings': sightings,
     }
