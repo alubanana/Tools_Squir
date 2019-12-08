@@ -108,6 +108,11 @@ def map_squir(request):
         'sightings': sightings,
     }
     
-    
     return render(request, 'sightings/map.html', context)
+
+def home(request):
+    
+    return render(request, 'sightings/home.html')
+    
+
 # Create your views here.
