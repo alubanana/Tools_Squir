@@ -1,0 +1,42 @@
+{% extends 'sightings/base.html' %}
+
+{% block main %}
+<title>Stats of Squirrels</title>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">
+                <strong>Stats of Squirrels</strong>
+                <br>
+              </p >
+              <div class="d-flex justify-content-between align-items-center"> 
+                <small class="text-muted">Total Number of Squirrels: {{total}}</small>
+              </div>
+              <div class="d-flex justify-content-between align-items-center"> 
+                <small class="text-muted">Number of Juvenile Squirrel: {{Age_count}} - Proportion: {{Age}} </small>
+              </div>
+               <div class="d-flex justify-content-between align-items-center"> 
+                <small class="text-muted">Number of Squirrel Found in AM: {{AM_count}} - Proportion: {{AM}} </small>
+              </div>
+              <div class="d-flex justify-content-between align-items-center"> 
+                <small class="text-muted">Number of Squirrel on the Ground: {{Loc_count}} - Proportion: {{Loc}} </small>
+              </div>
+              <div class="d-flex justify-content-between align-items-center"> 
+                <small class="text-muted">Number of Squirrel is Eating: {{Eat_count}} - Proportion: {{Eat}} </small>
+              </div>
+              <div class="d-flex justify-content-between align-items-center"> 
+                <small class="text-muted">Number of Squirrel is Running: {{Runs_count}} Proportion: {{Runs}} </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

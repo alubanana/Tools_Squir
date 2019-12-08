@@ -1,0 +1,26 @@
+{% extends 'sightings/base.html' %}
+{% block main %}
+<title>Squirrels in the Central Park</title>
+<a class="btn btn-primary" href= "add"  > |Add a Squirrel Here|</a>  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        {% for s in squirrels %}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">
+                <strong>{{ forloop.counter }} : {{ s.unique_squirrel_id }}</strong>
+                <br>
+              </p >
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">{{ s.date }}</small>
+              </div>
+              <a class="btn btn-primary" href= {{s.unique_squirrel_id}}  >Edit</a >
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
